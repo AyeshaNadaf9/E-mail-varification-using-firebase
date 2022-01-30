@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="display-3 text-center">Student list</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4" *ngFor="let x of students">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="text-secondary">{{ x.name }}</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <strong>Email</strong>
+                                <span class="float-end">{{ x.email }}</span>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Mobile</strong>
+                                <span class="float-end">{{ x.mobile }}</span>
+                            </li>
+                            <li class="list-group-item">
+                                <strong>Address</strong>
+                                <span class="float-end">{{ x.Address }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href routerLink="/student/edit/{{x.id}}" class="btn btn-info">Edit</a>
+                        <button (click)="delHandler(x.id)" class="btn btn-danger float-end">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

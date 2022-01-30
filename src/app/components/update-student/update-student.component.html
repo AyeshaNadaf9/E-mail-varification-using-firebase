@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 class="display-3 text-info"> Update Course </h3>
+             <p> {{ id }} </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3 mt-3 mb-3" *ngFor="let x of student" >
+            <div class="card">
+                <div class="card-body">
+                    <form (ngSubmit)="submitHandler(x)" method="post" autocomplete="off">
+
+                        <div class="form-group mt-2 mb-2">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" [(ngModel)]="x.name" value="{{x.name}}" class="form-control" required>
+                        </div>
+                        <div class="form-group mt-2 mb-2">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" [(ngModel)]="x.email" value="{{x.email}}" class="form-control" required>
+                        </div>
+                        <div class="form-group mt-2 mb-2">
+                            <label for="mobile">Mobile</label>
+                            <input type="number" name="mobile" id="mobile" [(ngModel)]="x.mobile" value="{{x.mobile}}" class="form-control" required>
+                        </div>
+                        <div class="form-group mt-2 mb-2">
+                            <label for="address">Address</label>
+                            <textarea name="address"  id="address" cols="30" rows="5" [(ngModel)]="x.address" value="{{x.address}}" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group mt-2 mb-2">
+                            <input type="submit" value="Update" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

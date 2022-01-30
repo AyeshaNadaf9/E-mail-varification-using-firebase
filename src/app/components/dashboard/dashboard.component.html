@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container w-100">
+         <div class="d-flex align-item-center justify-content-end">
+             <button class="btn btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#myCanvas">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <a href="#" (click)="logoutHandler()" class="btn btn-danger float-end">Logout</a>
+         </div>
+    </div>
+ </nav>
+ 
+ <div class="offcanvas offcanvas-start" id="myCanvas" tabindex="-1">
+     <div class="offcanvas-header">
+         <h5 class="offcanvas-title">Menu</h5>
+         <button class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+     </div>
+     <div class="offcanvas-body">
+         <ul class="nav m-2 flex-column">
+             <li class="nav-item">
+                 <a href routerLink="/course" class="nav-link">Course</a>
+             </li>
+             <li class="nav-item">
+                 <a href routerLink="/course/new" class="nav-link">New Course</a>
+             </li>
+             <li class="nav-item">
+                <a href routerLink="/student" class="nav-link">Student</a>
+            </li>
+            <li class="nav-item">
+                <a href routerLink="/student/new" class="nav-link">New student</a>
+            </li>
+         </ul>
+     </div>
+ </div>
+ 
+ <div class="container">
+     <div class="row">
+         <div class="col-md-12 text-center">
+             <h3 class="display-3 text-secondary">Dashboard</h3>
+         </div>
+     </div>
+     <div class="row">
+         <div class="col-md-4">
+             <div class="card bg-success">
+                 <div class="card-body">
+                     <h4 class="display-4 text-center">
+                         Course
+                     </h4>
+                     <h3 class="display-2 text-center text-light">
+                         {{ course.length }}
+                     </h3>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ 

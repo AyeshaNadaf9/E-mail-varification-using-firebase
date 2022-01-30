@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 class="display-3">Create course</h3>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="course" (ngSubmit)="submitHandler(course.value)">
+                        <div class="form-group-mt-2">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" [formControl] ="course.controls['title']" id="title" class="form-control" required>
+                        </div>
+                        <div class="form-group-mt-2">
+                            <label for="fee">Fee</label>
+                            <input type="number" name="fee" [formControl] ="course.controls['fee']" id="fee" class="form-control" required>
+                        </div>
+                        <div class="form-group-mt-2">
+                            <label for="duration">Duration</label>
+                            <input type="text" name="duration" [formControl] ="course.controls['duration']" id="duration" class="form-control" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="submit" value="Create" class="btn btn-success">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

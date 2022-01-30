@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 class="display-3 text-secondary">Register</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="reg" (ngSubmit)="submitHandler(reg.value)" >
+
+                            <div class="form-group mt-2 mb-2">
+                                <label for="user">Username</label>
+                                <input type="email" name="user" id="user" [formControl]="reg.controls['user']" class="form-control" required>
+                            </div>
+                            <div class="form-group mt-2 mb-2">
+                                <label for="pass">Password</label>
+                                <input type="password" name="pass" id="pass" [formControl]="reg.controls['pass']" class="form-control" required>
+                            </div>
+                            <div class="form-group mt-2 mb-2">
+                                <input type="submit" value="Register" class="btn btn-warning">
+                            <a href routerLink="/login" class="btn btn-link float-end">
+                                Already Registered? Login
+                            </a>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
