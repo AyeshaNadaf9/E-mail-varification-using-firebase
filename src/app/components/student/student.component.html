@@ -6,13 +6,13 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div class="col-md-4" *ngFor="let x of students">
-                <div class="card">
+            <div class="col-12 mb-4" *ngFor="let x of students">
+                <div class="card h-100">
                     <div class="card-header">
                         <h4 class="text-secondary">{{ x.name }}</h4>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group">
+                        <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <strong>Email</strong>
                                 <span class="float-end">{{ x.email }}</span>
@@ -23,7 +23,7 @@
                             </li>
                             <li class="list-group-item">
                                 <strong>Address</strong>
-                                <span class="float-end">{{ x.Address }}</span>
+                                <span class="float-end">{{ x.address }}</span>
                             </li>
                         </ul>
                     </div>
